@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<!--
-  🎁 Сайт-поздравление для Оли
-  ─────────────────────────────────────────────
-  Как опубликовать на GitHub:
-  1. Создай репозиторий (например, «olya») и загрузи этот файл под именем index.html
-  2. Settings → Pages → Branch: main → Save
-  3. Через пару минут сайт будет на https://ЛОГИН.github.io/ИМЯ-РЕПОЗИТОРИЯ/
-  ─────────────────────────────────────────────
--->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Оля, с Днём рождения! 💌</title>
-<meta name="description" content="Срочное поздравление чрезвычайной важности для самой лучшей Оли">
+<meta name="description" content="Моё личное поздравление чрезвычайной важности для самой лучшей Оли">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/yeseva-one@latest/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/600.css">
@@ -40,7 +31,7 @@ body{
   background-size:26px 26px;
   overflow-x:clip; line-height:1.55;
 }
-body::after{ /* зерно */
+body::after{
   content:''; position:fixed; inset:0; z-index:120; pointer-events:none; opacity:.055;
   mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -48,19 +39,18 @@ body::after{ /* зерно */
 ::selection{background:var(--rasp);color:var(--cream)}
 img,svg{display:block;max-width:100%}
 button{font:inherit;cursor:pointer;color:inherit}
-a{color:inherit}
 h1,h2,h3,.yeseva{font-family:'Yeseva One',serif;font-weight:400;line-height:1.08}
 .hand{font-family:'Caveat',cursive}
 .wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(18px,4vw,40px)}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--rasp)}
 .kicker::before{content:'';width:34px;height:2.5px;background:var(--rasp)}
 section{padding-block:clamp(64px,9vw,110px)}
-.sec-head h2{font-size:clamp(30px,4.6vw,52px);max-width:720px}
+.sec-head h2{font-size:clamp(30px,4.6vw,52px);max-width:760px}
 
 /* ── кнопки ── */
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:2.5px solid var(--ink);
   border-radius:999px;font-weight:700;background:var(--cream);box-shadow:4px 4px 0 var(--ink);
-  transition:transform .18s ease,box-shadow .18s ease,background .18s;text-decoration:none;user-select:none}
+  transition:transform .18s ease,box-shadow .18s ease,background .18s;user-select:none}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
 .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .btn-primary{background:var(--rasp);color:var(--cream)}
@@ -68,7 +58,7 @@ section{padding-block:clamp(64px,9vw,110px)}
 .btn-pine{background:var(--pine);color:var(--cream)}
 :focus-visible{outline:3px dashed var(--rasp);outline-offset:3px;border-radius:6px}
 
-/* ── телеграмма-оверлей ── */
+/* ── телеграмма ── */
 #telegram{display:none;position:fixed;inset:0;z-index:200;place-items:center;padding:20px;
   background:var(--paper);
   background-image:radial-gradient(rgba(51,32,45,.055) 1.2px,transparent 1.3px);background-size:26px 26px;
@@ -102,36 +92,51 @@ body.js #telegram{display:grid}
 #musicBtn.on{background:var(--gold-soft);animation:musWiggle 1s ease-in-out infinite}
 @keyframes musWiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
 
-/* ── падающие лепестки ── */
+/* ── лепестки ── */
 #ambient{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 #ambient span{position:absolute;top:-7vh;opacity:.55;animation:petalFall linear infinite}
 @keyframes petalFall{to{transform:translateY(114vh) rotate(360deg)}}
 
 /* ── герой ── */
 #hero{position:relative;overflow:hidden;padding-top:clamp(56px,7vw,88px)}
-.hero-grid{position:relative;z-index:2}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center}
 .hero-note{font-family:'Caveat',cursive;font-size:clamp(20px,2.4vw,26px);color:var(--pine);transform:rotate(-2deg);display:inline-block;margin-bottom:14px}
-h1.hero-title{font-size:clamp(44px,9.2vw,116px);letter-spacing:.01em;text-shadow:4px 4px 0 rgba(217,79,112,.18);max-width:14ch}
+h1.hero-title{font-size:clamp(42px,7.6vw,96px);letter-spacing:.01em;text-shadow:4px 4px 0 rgba(217,79,112,.18)}
 .hero-sub{margin-top:22px;max-width:560px;font-size:clamp(16px,1.8vw,19px);color:var(--plum)}
-.hug-zone{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.hug-zone{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
 .hug-count{font-family:'Caveat',cursive;font-size:24px;color:var(--rasp-dk)}
-.stickers{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+.stickers{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
 .sticker{border:2px dashed var(--ink);background:var(--cream);padding:8px 16px;font-size:12px;font-weight:800;
   letter-spacing:.14em;text-transform:uppercase;box-shadow:3px 3px 0 rgba(51,32,45,.2)}
 .sticker:nth-child(1){transform:rotate(-2.5deg);background:var(--blush)}
 .sticker:nth-child(2){transform:rotate(1.6deg)}
 .sticker:nth-child(3){transform:rotate(-1deg);background:var(--mint)}
-.seal{position:absolute;right:clamp(0px,4vw,60px);top:-6px;width:clamp(96px,13vw,150px);height:clamp(96px,13vw,150px);
-  border-radius:50%;background:radial-gradient(circle at 34% 30%,#ef7290,var(--rasp) 55%,var(--rasp-dk));
-  border:2.5px solid var(--ink);display:grid;place-items:center;color:var(--cream);transform:rotate(10deg);
+
+/* полароид в герое + сургучная печать */
+.hero-right{position:relative;justify-self:end;width:min(380px,100%)}
+.hero-photo{position:relative;background:#FFFDF6;border:2.5px solid var(--ink);padding:12px 12px 14px;
+  box-shadow:var(--shadow);transform:rotate(3deg)}
+.hero-photo figcaption{font-family:'Caveat',cursive;font-size:22px;text-align:center;padding-top:10px}
+.seal{position:absolute;top:-48px;left:-42px;width:118px;height:118px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#ef7290,var(--rasp) 55%,var(--rasp-dk));
+  border:2.5px solid var(--ink);display:grid;place-items:center;color:var(--cream);transform:rotate(-10deg);
   box-shadow:6px 8px 0 rgba(51,32,45,.2);z-index:3;animation:bob 5s ease-in-out infinite}
-.seal span{font-family:'Yeseva One',serif;font-size:clamp(40px,5vw,62px);line-height:1}
-.seal small{font-size:9px;letter-spacing:.28em;text-transform:uppercase;font-weight:800}
 .seal-inner{text-align:center}
-@keyframes bob{50%{transform:rotate(6deg) translateY(-10px)}}
+.seal span{font-family:'Yeseva One',serif;font-size:44px;line-height:1}
+.seal small{font-size:9px;letter-spacing:.28em;text-transform:uppercase;font-weight:800}
+@keyframes bob{50%{transform:rotate(-14deg) translateY(-8px)}}
 .doodle{position:absolute;z-index:1;animation:bob 6s ease-in-out infinite}
 .doodle.d2{animation-delay:-2s;animation-duration:7s}
 .doodle.d3{animation-delay:-4s;animation-duration:5.4s}
+
+/* ── фото-рамки (img + подсказка) ── */
+.pc-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper2);border:1.5px solid rgba(51,32,45,.2)}
+.pc-img img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;animation:slowkb 15s ease-in-out infinite}
+.ph-hint{display:none;position:absolute;inset:0;place-items:center;text-align:center;padding:16px;
+  color:rgba(51,32,45,.6);font-size:13px;font-weight:700;letter-spacing:.06em;line-height:1.7}
+.ph-hint code{display:block;font-size:12px;background:rgba(51,32,45,.08);border:1.5px dashed rgba(51,32,45,.3);
+  border-radius:8px;padding:4px 10px;margin-top:8px;font-weight:600}
+@keyframes slowkb{0%,100%{transform:scale(1)}50%{transform:scale(1.09) translate(1.5%,-1.5%)}}
 
 /* ── бегущая строка ── */
 .marquee{margin-top:clamp(48px,6vw,72px);background:var(--rasp);color:var(--cream);border-block:2.5px solid var(--ink);
@@ -194,7 +199,7 @@ h1.hero-title{font-size:clamp(44px,9.2vw,116px);letter-spacing:.01em;text-shadow
 #wishBox .hand{font-size:clamp(24px,3vw,30px);color:var(--rasp-dk);line-height:1.3}
 #wishBox small{display:block;margin-top:12px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--pine);font-weight:800}
 
-/* ── стопка карточек «причины» ── */
+/* ── стопка «причины» ── */
 .stack{margin-top:44px}
 .stack-card{position:sticky;top:calc(88px + var(--i)*20px);border:2.5px solid var(--ink);box-shadow:var(--shadow);
   padding:clamp(24px,4vw,40px);margin-bottom:26px;transform:rotate(var(--r));background:var(--cream);
@@ -208,25 +213,23 @@ h1.hero-title{font-size:clamp(44px,9.2vw,116px);letter-spacing:.01em;text-shadow
 .sc-4{background:var(--pine);color:var(--cream);--r:.8deg}
 .sc-5{background:var(--blush);--r:-.7deg}
 
-/* ── открытки ── */
-#board{position:relative;height:760px;margin-top:50px}
+/* ── галерея открыток с фото ── */
+#board{position:relative;height:780px;margin-top:50px}
 .postcard{position:absolute;width:var(--w,280px);background:#FFFDF6;border:2.5px solid var(--ink);
   padding:12px 12px 14px;box-shadow:var(--shadow);transform:rotate(var(--r));cursor:default;
   transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
 .postcard:hover{transform:rotate(0) scale(1.05);z-index:20;box-shadow:14px 18px 0 rgba(51,32,45,.18)}
 .postcard::before{content:'';position:absolute;top:-15px;left:50%;width:96px;height:30px;
   transform:translateX(-50%) rotate(-4deg);background:rgba(232,166,60,.45);border:1px dashed rgba(51,32,45,.3)}
-.pc-img{aspect-ratio:4/5;overflow:hidden;background:var(--paper2);border:1.5px solid rgba(51,32,45,.2)}
-.pc-img svg{width:100%;height:100%;animation:slowkb 15s ease-in-out infinite}
-@keyframes slowkb{0%,100%{transform:scale(1)}50%{transform:scale(1.09) translate(1.5%,-1.5%)}}
 .postcard figcaption{font-family:'Caveat',cursive;font-size:21px;text-align:center;padding-top:10px;line-height:1.2}
 .pc-num{position:absolute;bottom:10px;right:12px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
   color:rgba(51,32,45,.5);font-weight:800}
+/* положение и наклон карточек — правь здесь */
 .pc1{--r:-6deg;left:2%;top:0}
-.pc2{--r:3deg;left:34%;top:15%}
+.pc2{--r:3deg;left:34%;top:16%}
 .pc3{--r:6deg;left:66%;top:2%}
-.pc4{--r:4deg;left:12%;top:50%}
-.pc5{--r:-4deg;left:52%;top:48%}
+.pc4{--r:4deg;left:12%;top:51%}
+.pc5{--r:-4deg;left:52%;top:49%}
 
 /* ── пожелание-карта ── */
 #wish-draw{text-align:center}
@@ -238,7 +241,7 @@ h1.hero-title{font-size:clamp(44px,9.2vw,116px);letter-spacing:.01em;text-shadow
 .wish-front{background:var(--pine);color:var(--cream);
   background-image:radial-gradient(rgba(255,249,239,.25) 2px,transparent 2.6px),radial-gradient(rgba(255,249,239,.18) 2px,transparent 2.6px);
   background-size:40px 40px,56px 56px;background-position:0 0,22px 22px}
-.wish-front .q{font-family:'Yeseva One',serif;font-size:76px;line-height:1}
+.wish-front .q{font-family:'Yeseva One',serif;font-size:70px;line-height:1}
 .wish-back{background:var(--cream);transform:rotateY(180deg)}
 .wish-back .hand{font-size:clamp(24px,6.4vw,30px);line-height:1.3;color:var(--plum)}
 .wish-back .corner{position:absolute;font-size:22px}
@@ -267,27 +270,6 @@ h1.hero-title{font-size:clamp(44px,9.2vw,116px);letter-spacing:.01em;text-shadow
 .sheet .sign{font-size:clamp(26px,3vw,34px);color:var(--rasp-dk);font-weight:700}
 .sheet .sign-sub{font-family:'Golos Text',sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--pine);margin-top:10px}
 
-/* ── книга пожеланий ── */
-.gb-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);margin-top:44px;align-items:start}
-.gb-form{background:var(--cream);border:2.5px solid var(--ink);box-shadow:var(--shadow);padding:clamp(22px,3vw,32px);
-  position:sticky;top:100px}
-.gb-form label{display:block;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin:16px 0 6px}
-.gb-form label:first-child{margin-top:0}
-.gb-form input,.gb-form textarea{width:100%;border:2px solid var(--ink);border-radius:10px;background:var(--paper);
-  padding:12px 14px;font:inherit;font-size:15px;resize:vertical}
-.gb-form textarea{min-height:110px}
-.gb-form input:focus,.gb-form textarea:focus{outline:none;border-color:var(--rasp);box-shadow:3px 3px 0 rgba(217,79,112,.3)}
-.gb-form .btn{margin-top:20px;width:100%;justify-content:center}
-.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:22px}
-.note{position:relative;border:2px solid var(--ink);padding:38px 18px 18px;min-height:150px;box-shadow:5px 6px 0 rgba(51,32,45,.14);
-  transform:rotate(var(--r,0deg));transition:transform .3s;animation:noteIn .5s cubic-bezier(.2,.8,.3,1.2) backwards}
-.note:hover{transform:rotate(0) scale(1.03);z-index:2}
-@keyframes noteIn{from{opacity:0;transform:rotate(var(--r,0deg)) scale(.7)}}
-.note::before{content:'📌';position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:22px}
-.note p{font-family:'Caveat',cursive;font-size:22px;line-height:1.25;color:var(--ink)}
-.note cite{display:block;margin-top:12px;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rasp-dk)}
-.note--a{background:var(--cream)}.note--b{background:var(--gold-soft)}.note--c{background:var(--blush)}.note--d{background:var(--mint)}
-
 /* ── подвал ── */
 footer{border-top:2.5px solid var(--ink);padding:36px 20px 44px;text-align:center;background:var(--paper2)}
 footer .hand{font-size:26px;color:var(--rasp-dk)}
@@ -298,33 +280,33 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 [data-reveal] .rm > span{display:block;transform:translateY(112%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 [data-reveal].in .rm > span{transform:none}
 .fade-up{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-.fade-up.in, [data-reveal].in .fade-up{opacity:1;transform:none}
+.fade-up.in,[data-reveal].in .fade-up{opacity:1;transform:none}
 .d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
 
-/* ── летящие сердечки ── */
 .hug-heart{position:fixed;z-index:300;font-size:26px;pointer-events:none;animation:flyUp .95s ease-out forwards}
 @keyframes flyUp{to{transform:translateY(-110px) scale(1.5) rotate(14deg);opacity:0}}
 
 /* ── адаптив ── */
 @media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-right{justify-self:center;margin-top:26px}
+  .seal{left:auto;right:-24px}
   #board{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .postcard{position:static;width:100%;--r:0deg}
-  .letter-grid,.gb-grid{grid-template-columns:1fr}
-  .letter-left,.gb-form{position:static}
+  .letter-grid{grid-template-columns:1fr}
+  .letter-left{position:static}
   .facts-grid{grid-template-columns:1fr 1fr;row-gap:36px}
-  .seal{right:6px}
 }
 @media (max-width:560px){
   #board{grid-template-columns:1fr}
-  .stack-card{grid-template-columns:1fr;gap:8px}
-  .stack-card{top:calc(80px + var(--i)*14px)}
+  .stack-card{grid-template-columns:1fr;gap:8px;top:calc(80px + var(--i)*14px)}
 }
 
 /* ── reduced motion ── */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   html{scroll-behavior:auto}
-  .pc-img svg{animation:none}
+  .pc-img img{animation:none}
   .marquee-track{animation:none}
 }
 </style>
@@ -340,15 +322,15 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
     <div class="tg-cut">✂ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
     <div class="tg-top"><span>Почта любви</span><span>Депеша № 001</span></div>
     <p class="tg-row"><b>Кому:</b> Оле, самой-самой</p>
-    <p class="tg-row"><b>От:</b> тех, кто тебя обожает</p>
-    <p class="tg-text">«Поступило поздравление чрезвычайной важности. Вскрыть немедленно. Обнимашки и комплименты действуют бессрочно, без ограничений по количеству.»</p>
+    <p class="tg-row"><b>От:</b> меня</p>
+    <p class="tg-text">«Отправляю тебе поздравление чрезвычайной важности. Вскрыть немедленно. Обнимашки и комплименты действуют бессрочно — у меня их бесконечный запас.»</p>
     <button class="btn btn-primary" id="openTg" type="button">Вскрыть конверт ✂</button>
     <p class="tg-code">ОЛЯ · ПРАЗДНИК · СРОЧНО · ТЧК</p>
   </div>
 </div>
 
 <header class="topbar">
-  <div class="brand"><span class="dot"></span> Почта любви · для Оли</div>
+  <div class="brand"><span class="dot"></span> Почта любви · от меня — Оле</div>
   <button id="musicBtn" type="button" aria-pressed="false" aria-label="Включить праздничную мелодию" title="Праздничная мелодия">♪</button>
 </header>
 
@@ -356,29 +338,41 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 
   <!-- ══ Герой ══ -->
   <section id="hero">
-    <svg class="doodle" style="right:22%;top:16%" width="44" height="44" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l4.5 13.5H39l-11.8 8.6 4.5 13.6L20 29.2 8.3 37.7l4.5-13.6L1 15.5h14.5z" fill="#E8A63C"/></svg>
+    <svg class="doodle" style="right:44%;top:12%" width="44" height="44" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l4.5 13.5H39l-11.8 8.6 4.5 13.6L20 29.2 8.3 37.7l4.5-13.6L1 15.5h14.5z" fill="#E8A63C"/></svg>
     <svg class="doodle d2" style="left:2%;bottom:16%" width="72" height="30" viewBox="0 0 72 30" aria-hidden="true"><path d="M3 16C9 3 14 27 21 14S34 2 41 15s13 12 28-2" fill="none" stroke="#D94F70" stroke-width="3.4" stroke-linecap="round"/></svg>
-    <svg class="doodle d3" style="right:8%;bottom:8%" width="40" height="38" viewBox="0 0 40 38" aria-hidden="true"><path d="M20 36C9 27 2 20 2 12 2 6 6 2 12 2c3.4 0 6.4 1.6 8 4.2C21.6 3.6 24.6 2 28 2c6 0 10 4 10 10 0 8-7 15-18 24z" fill="#D94F70"/></svg>
+    <svg class="doodle d3" style="right:6%;bottom:6%" width="40" height="38" viewBox="0 0 40 38" aria-hidden="true"><path d="M20 36C9 27 2 20 2 12 2 6 6 2 12 2c3.4 0 6.4 1.6 8 4.2C21.6 3.6 24.6 2 28 2c6 0 10 4 10 10 0 8-7 15-18 24z" fill="#D94F70"/></svg>
     <div class="wrap hero-grid" data-reveal>
-      <div class="seal" aria-hidden="true"><div class="seal-inner"><span>О♥</span><small>с любовью</small></div></div>
-      <p class="hero-note fade-up">да-да, эта страница — про тебя! ↓</p>
-      <p class="kicker fade-up d1">Срочное послание · читать с улыбкой</p>
-      <h1 class="hero-title"><span id="scrambleTitle" data-text="Оля, с Днём рождения!">Оля, с Днём рождения!</span></h1>
-      <p class="hero-sub fade-up d2">Сегодня твой день, и мы собрали для тебя маленький праздник прямо в интернете. Заходи смелее, ничего не бойся — и обязательно задуй свечи, желание уже на подходе.</p>
-      <div class="hug-zone fade-up d3">
-        <button class="btn btn-gold" id="hugBtn" type="button">Обнять Олю 🤗</button>
-        <span class="hug-count">обнимашек отправлено: <b id="hugNum">0</b></span>
+      <div>
+        <p class="hero-note fade-up">да-да, эта страница — про тебя! ↓</p>
+        <p class="kicker fade-up d1">Срочное послание · лично от меня</p>
+        <h1 class="hero-title"><span id="scrambleTitle" data-text="Оля, с Днём рождения!">Оля, с Днём рождения!</span></h1>
+        <p class="hero-sub fade-up d2">Сегодня твой день, и я собрал для тебя маленький праздник прямо в интернете. Заходи смелее — и обязательно задуй свечи: твоё желание я уже отправил во вселенную.</p>
+        <div class="hug-zone fade-up d3">
+          <button class="btn btn-gold" id="hugBtn" type="button">Обнять тебя 🤗</button>
+          <span class="hug-count">обнимашек отправлено: <b id="hugNum">0</b></span>
+        </div>
+        <div class="stickers fade-up d3">
+          <span class="sticker">ты — моя лучшая подруга</span>
+          <span class="sticker">проверено мной лично</span>
+          <span class="sticker">твоё сияние — бесконечное</span>
+        </div>
       </div>
-      <div class="stickers fade-up d3">
-        <span class="sticker">официально: лучшая подруга</span>
-        <span class="sticker">сверено и подтверждено друзьями</span>
-        <span class="sticker">сияние — бесконечное</span>
+      <div class="hero-right fade-up d2">
+        <figure class="hero-photo">
+          <div class="seal" aria-hidden="true"><div class="seal-inner"><span>О♥</span><small>с любовью</small></div></div>
+          <div class="pc-img">
+            <!-- ГЛАВНОЕ ФОТО: положи файл photo-main.jpg рядом с index.html -->
+            <img src="photo-main.jpg" alt="Оля" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">здесь будет твоё главное фото<code>photo-main.jpg</code></div>
+          </div>
+          <figcaption>ты — главное украшение этого праздника</figcaption>
+        </figure>
       </div>
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span><b>обнимашки</b>✦<b>улыбки</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
-        <span><b>обнимашки</b>✦<b>улыбки</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
+        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
+        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
       </div>
     </div>
   </section>
@@ -429,178 +423,76 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
   <section id="reasons" data-reveal>
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker fade-up">доказательная база</p>
-        <h2 class="rm"><span>Пять причин, почему Оля — чудо</span></h2>
+        <p class="kicker fade-up">моя доказательная база</p>
+        <h2 class="rm"><span>Пять причин, почему ты — чудо</span></h2>
       </div>
       <div class="stack">
-        <article class="stack-card sc-1" style="--i:0"><div class="num">01</div><div><h3>С ней уютно даже молчать</h3><p>Рядом с Олей тишина превращается в разговор, а самый обычный вечер — в маленький праздник. Это редкий талант.</p></div></article>
-        <article class="stack-card sc-2" style="--i:1"><div class="num">02</div><div><h3>Её смех лечит</h3><p>Проверено сотни раз: после разговора с Олей любой дождь кажется свежее, а любая проблема — раза в три меньше.</p></div></article>
-        <article class="stack-card sc-3" style="--i:2"><div class="num">03</div><div><h3>Всегда на твоей стороне</h3><p>В два часа ночи и в семь утра, с гениальным планом спасения мира или просто с крепкими обнимашками.</p></div></article>
-        <article class="stack-card sc-4" style="--i:3"><div class="num">04</div><div><h3>Вдохновляет быть смелее</h3><p>Рядом с ней хочется мечтать крупнее, начинать новое и не бояться, что не получится. Получится — она проверила.</p></div></article>
-        <article class="stack-card sc-5" style="--i:4"><div class="num">05</div><div><h3>Делает чудо из мелочей</h3><p>Чай в красивой кружке, свеча, музыка потише, плед — и вот уже обычный вторник становится праздником.</p></div></article>
+        <article class="stack-card sc-1" style="--i:0"><div class="num">01</div><div><h3>С тобой уютно даже молчать</h3><p>Тишина с тобой превращается в разговор, а самый обычный вечер — в маленький праздник. Я это очень ценю.</p></div></article>
+        <article class="stack-card sc-2" style="--i:1"><div class="num">02</div><div><h3>Твой смех лечит</h3><p>Проверено мной сотни раз: после разговора с тобой любой дождь кажется свежее, а любая проблема — раза в три меньше.</p></div></article>
+        <article class="stack-card sc-3" style="--i:2"><div class="num">03</div><div><h3>Ты всегда на моей стороне</h3><p>В два часа ночи и в семь утра, с гениальным планом или просто с крепкими обнимашками. Это дороже любых подарков.</p></div></article>
+        <article class="stack-card sc-4" style="--i:3"><div class="num">04</div><div><h3>Ты вдохновляешь меня быть смелее</h3><p>Рядом с тобой мне хочется мечтать крупнее, начинать новое и не бояться, что не получится. Получится — я проверил.</p></div></article>
+        <article class="stack-card sc-5" style="--i:4"><div class="num">05</div><div><h3>Ты делаешь чудо из мелочей</h3><p>Чай в красивой кружке, свеча, музыка потише — и с тобой обычный вторник становится праздником.</p></div></article>
       </div>
     </div>
   </section>
 
-  <!-- ══ Открытки ══ -->
+  <!-- ══ Галерея фото ══
+       КАК ДОБАВИТЬ СВОИ ФОТО:
+       1. Загрузи файлы photo1.jpg … photo5.jpg в репозиторий рядом с index.html
+       2. Подпись меняется внутри <figcaption>
+       3. Лишняя карточка удаляется целиком (весь блок <figure …>…</figure>)
+       4. Наклон и положение — в CSS, классы .pc1–.pc5
+  -->
   <section id="postcards" data-reveal>
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker fade-up">художественные доказательства</p>
-        <h2 class="rm"><span>Открытки, нарисованные с любовью</span></h2>
+        <p class="kicker fade-up">самые красивые кадры</p>
+        <h2 class="rm"><span>Твои фото — я выбирал их с любовью</span></h2>
       </div>
       <div id="board">
         <figure class="postcard pc1">
           <div class="pc-img">
-            <svg viewBox="0 0 400 500" role="img" aria-label="Портрет Оли в виде матрёшки с букетом">
-              <rect width="400" height="500" fill="#F6EAD5"/>
-              <circle cx="60" cy="70" r="6" fill="#E8A63C"/><circle cx="345" cy="110" r="5" fill="#D94F70"/>
-              <circle cx="40" cy="330" r="5" fill="#2F6E62"/><circle cx="356" cy="380" r="6" fill="#E8A63C"/>
-              <path d="M95 60l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#D94F70"/>
-              <path d="M300 420l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#2F6E62"/>
-              <path d="M200 58C122 58 90 140 90 262c0 140 42 198 110 198s110-58 110-198C310 140 278 58 200 58Z" fill="#D94F70" stroke="#33202D" stroke-width="5"/>
-              <circle cx="140" cy="120" r="7" fill="#F3C56B"/><circle cx="255" cy="105" r="6" fill="#F3C56B"/>
-              <circle cx="115" cy="220" r="7" fill="#F3C56B"/><circle cx="290" cy="210" r="6" fill="#F3C56B"/>
-              <circle cx="125" cy="330" r="6" fill="#F3C56B"/><circle cx="285" cy="330" r="7" fill="#F3C56B"/>
-              <circle cx="200" cy="190" r="82" fill="#F5CBA0" stroke="#33202D" stroke-width="4"/>
-              <path d="M128 168Q200 112 272 168Q200 142 128 168Z" fill="#7A4636"/>
-              <circle cx="168" cy="188" r="7" fill="#33202D"/><circle cx="232" cy="188" r="7" fill="#33202D"/>
-              <path d="M152 172q14-9 30-2" stroke="#33202D" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <path d="M218 170q16-7 30 2" stroke="#33202D" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <circle cx="146" cy="216" r="13" fill="#E58CA1" opacity=".75"/><circle cx="254" cy="216" r="13" fill="#E58CA1" opacity=".75"/>
-              <circle cx="200" cy="208" r="5" fill="#E8A07A"/>
-              <path d="M180 230Q200 246 220 230" stroke="#33202D" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path d="M150 300Q200 278 250 300L240 434Q200 450 160 434Z" fill="#FFF6E6" stroke="#33202D" stroke-width="4"/>
-              <path d="M200 310v74M200 340l-30-24M200 340l30-24M200 356l-24 10M200 356l24 10" stroke="#2F6E62" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <circle cx="200" cy="306" r="13" fill="#D94F70" stroke="#33202D" stroke-width="3"/><circle cx="200" cy="306" r="5" fill="#F3C56B"/>
-              <circle cx="168" cy="314" r="11" fill="#F2B8C6" stroke="#33202D" stroke-width="3"/><circle cx="168" cy="314" r="4" fill="#E8A63C"/>
-              <circle cx="232" cy="314" r="11" fill="#E8A63C" stroke="#33202D" stroke-width="3"/><circle cx="232" cy="314" r="4" fill="#FFF6E6"/>
-              <circle cx="176" cy="368" r="9" fill="#D94F70" stroke="#33202D" stroke-width="3"/><circle cx="224" cy="368" r="9" fill="#F2B8C6" stroke="#33202D" stroke-width="3"/>
-              <ellipse cx="184" cy="390" rx="10" ry="5" fill="#2F6E62" transform="rotate(-24 184 390)"/>
-              <ellipse cx="216" cy="390" rx="10" ry="5" fill="#2F6E62" transform="rotate(24 216 390)"/>
-            </svg>
+            <img src="photo1.jpg" alt="Фото Оли № 1" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">фото № 1<code>photo1.jpg</code></div>
           </div>
-          <figcaption>Оля — это солнце, просто в форме человека ☀</figcaption>
-          <span class="pc-num">открытка № 1</span>
+          <figcaption>Ты — моё солнышко ☀</figcaption>
+          <span class="pc-num">кадр № 1</span>
         </figure>
 
         <figure class="postcard pc2">
           <div class="pc-img">
-            <svg viewBox="0 0 400 500" role="img" aria-label="Праздничный торт со свечами">
-              <rect width="400" height="500" fill="#FBF3E6"/>
-              <circle cx="56" cy="60" r="5" fill="#D94F70"/><circle cx="348" cy="90" r="6" fill="#E8A63C"/>
-              <circle cx="46" cy="300" r="5" fill="#2F6E62"/><circle cx="352" cy="330" r="5" fill="#D94F70"/>
-              <path d="M70 130l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#E8A63C"/>
-              <path d="M330 200l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#F2B8C6"/>
-              <ellipse cx="200" cy="440" rx="160" ry="26" fill="#F3C56B" stroke="#33202D" stroke-width="4"/>
-              <rect x="80" y="330" width="240" height="100" rx="14" fill="#3E7C6F" stroke="#33202D" stroke-width="4"/>
-              <path d="M84 334h232v10c-14 26-30-14-46 6s-32-16-48 4-32-14-48 6-30-16-46 4-24-14-44-8Z" fill="#FFF9EF" stroke="#33202D" stroke-width="3"/>
-              <circle cx="120" cy="390" r="4" fill="#F6D7DE"/><circle cx="180" cy="404" r="4" fill="#F3C56B"/><circle cx="250" cy="388" r="4" fill="#F6D7DE"/><circle cx="290" cy="406" r="4" fill="#F3C56B"/>
-              <rect x="112" y="240" width="176" height="92" rx="14" fill="#F0B660" stroke="#33202D" stroke-width="4"/>
-              <path d="M116 244h168v9c-12 22-26-12-40 5s-26-13-40 4-26-13-40 5-22-13-36-7Z" fill="#FFF9EF" stroke="#33202D" stroke-width="3"/>
-              <circle cx="150" cy="300" r="4" fill="#D94F70"/><circle cx="210" cy="310" r="4" fill="#FFF9EF"/><circle cx="255" cy="296" r="4" fill="#D94F70"/>
-              <rect x="144" y="168" width="112" height="76" rx="12" fill="#E05A7E" stroke="#33202D" stroke-width="4"/>
-              <path d="M148 172h104v8c-10 18-22-10-34 4s-22-11-34 4-20-11-36-6Z" fill="#FFF9EF" stroke="#33202D" stroke-width="3"/>
-              <rect x="163" y="112" width="12" height="44" rx="4" fill="#FFF9EF" stroke="#33202D" stroke-width="3"/>
-              <rect x="194" y="100" width="12" height="56" rx="4" fill="#F6D7DE" stroke="#33202D" stroke-width="3"/>
-              <rect x="226" y="112" width="12" height="44" rx="4" fill="#FFF9EF" stroke="#33202D" stroke-width="3"/>
-              <line x1="169" y1="112" x2="169" y2="104" stroke="#33202D" stroke-width="3"/>
-              <line x1="200" y1="100" x2="200" y2="90" stroke="#33202D" stroke-width="3"/>
-              <line x1="232" y1="112" x2="232" y2="104" stroke="#33202D" stroke-width="3"/>
-              <path d="M169 100c-6-8-2-18 0-22 2 4 6 14 0 22Z" fill="#F5BC50"/>
-              <path d="M200 86c-7-9-2-20 0-25 2 5 7 16 0 25Z" fill="#F5BC50"/>
-              <path d="M232 100c-6-8-2-18 0-22 2 4 6 14 0 22Z" fill="#F5BC50"/>
-              <circle cx="169" cy="92" r="10" fill="#F5BC50" opacity=".3"/><circle cx="200" cy="76" r="12" fill="#F5BC50" opacity=".3"/><circle cx="232" cy="92" r="10" fill="#F5BC50" opacity=".3"/>
-            </svg>
+            <img src="photo2.jpg" alt="Фото Оли № 2" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">фото № 2<code>photo2.jpg</code></div>
           </div>
-          <figcaption>Торт сам себя не съест!</figcaption>
-          <span class="pc-num">открытка № 2</span>
+          <figcaption>Эта улыбка ярче любых гирлянд</figcaption>
+          <span class="pc-num">кадр № 2</span>
         </figure>
 
         <figure class="postcard pc3">
           <div class="pc-img">
-            <svg viewBox="0 0 400 500" role="img" aria-label="Воздушные шары летят в небо">
-              <rect width="400" height="500" fill="#F6EAD5"/>
-              <circle cx="70" cy="90" r="4" fill="#E8A63C"/><circle cx="330" cy="60" r="4" fill="#D94F70"/><circle cx="348" cy="240" r="4" fill="#2F6E62"/>
-              <path d="M60 300l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#F2B8C6"/>
-              <path d="M336 420l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#E8A63C"/>
-              <path d="M120 250q-30 90 30 200" stroke="#33202D" stroke-width="2.5" fill="none"/>
-              <ellipse cx="118" cy="170" rx="62" ry="76" fill="#D94F70" stroke="#33202D" stroke-width="4"/>
-              <path d="M112 246l12 0-6 14z" fill="#B23558" stroke="#33202D" stroke-width="3"/>
-              <ellipse cx="98" cy="138" rx="14" ry="22" fill="#FFF9EF" opacity=".45" transform="rotate(-16 98 138)"/>
-              <path d="M200 210q-8 110 -10 230" stroke="#33202D" stroke-width="2.5" fill="none"/>
-              <ellipse cx="202" cy="126" rx="66" ry="82" fill="#E8A63C" stroke="#33202D" stroke-width="4"/>
-              <path d="M196 206l14 0-7 15z" fill="#C68A28" stroke="#33202D" stroke-width="3"/>
-              <ellipse cx="180" cy="90" rx="15" ry="24" fill="#FFF9EF" opacity=".5" transform="rotate(-16 180 90)"/>
-              <path d="M286 260q30 80 -6 180" stroke="#33202D" stroke-width="2.5" fill="none"/>
-              <ellipse cx="284" cy="182" rx="56" ry="70" fill="#2F6E62" stroke="#33202D" stroke-width="4"/>
-              <path d="M278 250l12 0-6 13z" fill="#245348" stroke="#33202D" stroke-width="3"/>
-              <ellipse cx="266" cy="152" rx="12" ry="20" fill="#FFF9EF" opacity=".4" transform="rotate(-16 266 152)"/>
-              <ellipse cx="330" cy="330" rx="34" ry="42" fill="#F2B8C6" stroke="#33202D" stroke-width="3.5"/>
-              <path d="M330 300q14 30 0 60" stroke="#FFF9EF" stroke-width="4" fill="none" opacity=".6"/>
-            </svg>
+            <img src="photo3.jpg" alt="Фото Оли № 3" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">фото № 3<code>photo3.jpg</code></div>
           </div>
-          <figcaption>Лети к мечтам — ветер попутный</figcaption>
-          <span class="pc-num">открытка № 3</span>
+          <figcaption>Мой любимый человек</figcaption>
+          <span class="pc-num">кадр № 3</span>
         </figure>
 
         <figure class="postcard pc4">
           <div class="pc-img">
-            <svg viewBox="0 0 400 500" role="img" aria-label="Две чашки чая с паром-сердечками">
-              <rect width="400" height="500" fill="#FBF3E6"/>
-              <rect x="0" y="380" width="400" height="120" fill="#EFD9B4"/>
-              <line x1="0" y1="380" x2="400" y2="380" stroke="#33202D" stroke-width="4"/>
-              <path d="M120 200c-16-20-44-6-34 16 6 14 24 22 34 34 10-12 28-20 34-34 10-22-18-36-34-16Z" fill="none" stroke="#D94F70" stroke-width="5" opacity=".8"/>
-              <path d="M276 180c-12-16-34-5-26 12 5 11 19 17 26 27 8-10 21-16 26-27 8-17-14-28-26-12Z" fill="none" stroke="#E8A63C" stroke-width="5" opacity=".85"/>
-              <path d="M150 250q0 60 50 60h0q50 0 50-60Z" fill="#FFF9EF" stroke="#33202D" stroke-width="4"/>
-              <path d="M250 258q26 4 22 24t-30 16" fill="none" stroke="#33202D" stroke-width="4"/>
-              <line x1="150" y1="262" x2="250" y2="262" stroke="#D94F70" stroke-width="6"/>
-              <ellipse cx="200" cy="330" rx="86" ry="16" fill="#F3C56B" stroke="#33202D" stroke-width="4"/>
-              <path d="M84 300q0 44 36 44t36-44Z" fill="#F6D7DE" stroke="#33202D" stroke-width="4"/>
-              <path d="M156 306q20 4 16 18t-22 12" fill="none" stroke="#33202D" stroke-width="3.5"/>
-              <line x1="84" y1="310" x2="156" y2="310" stroke="#2F6E62" stroke-width="5"/>
-              <ellipse cx="120" cy="358" rx="60" ry="12" fill="#FFF9EF" stroke="#33202D" stroke-width="3.5"/>
-              <circle cx="290" cy="352" r="16" fill="#E8A63C" stroke="#33202D" stroke-width="3.5"/><circle cx="286" cy="348" r="2.6" fill="#33202D"/><circle cx="296" cy="354" r="2.6" fill="#33202D"/>
-              <circle cx="322" cy="344" r="14" fill="#D94F70" stroke="#33202D" stroke-width="3.5"/><circle cx="319" cy="341" r="2.4" fill="#33202D"/><circle cx="327" cy="347" r="2.4" fill="#33202D"/>
-              <rect x="304" y="250" width="26" height="52" rx="6" fill="#FFF9EF" stroke="#33202D" stroke-width="4"/>
-              <line x1="317" y1="250" x2="317" y2="242" stroke="#33202D" stroke-width="3"/>
-              <path d="M317 238c-5-7-1-15 0-18 1 3 5 11 0 18Z" fill="#F5BC50"/>
-              <circle cx="52" cy="80" r="5" fill="#D94F70"/><circle cx="356" cy="70" r="5" fill="#2F6E62"/>
-              <path d="M44 140l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#E8A63C"/>
-            </svg>
+            <img src="photo4.jpg" alt="Фото Оли № 4" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">фото № 4<code>photo4.jpg</code></div>
           </div>
-          <figcaption>Разговоры до утра — в комплекте</figcaption>
-          <span class="pc-num">открытка № 4</span>
+          <figcaption>С тобой даже обычный день — праздник</figcaption>
+          <span class="pc-num">кадр № 4</span>
         </figure>
 
         <figure class="postcard pc5">
           <div class="pc-img">
-            <svg viewBox="0 0 400 500" role="img" aria-label="Ваза с пионами и подарок">
-              <rect width="400" height="500" fill="#F6EAD5"/>
-              <line x1="30" y1="430" x2="370" y2="430" stroke="#33202D" stroke-width="4"/>
-              <path d="M200 300v-90M200 260l-52-52M200 260l52-46M200 240l-30-100M200 240l34-96" stroke="#2F6E62" stroke-width="5" fill="none" stroke-linecap="round"/>
-              <ellipse cx="150" cy="250" rx="16" ry="8" fill="#2F6E62" transform="rotate(-30 150 250)"/>
-              <ellipse cx="252" cy="262" rx="16" ry="8" fill="#2F6E62" transform="rotate(28 252 262)"/>
-              <circle cx="200" cy="120" r="34" fill="#D94F70" stroke="#33202D" stroke-width="4"/>
-              <circle cx="200" cy="120" r="18" fill="#E58CA1"/><circle cx="200" cy="120" r="7" fill="#F3C56B"/>
-              <circle cx="128" cy="190" r="28" fill="#F2B8C6" stroke="#33202D" stroke-width="4"/>
-              <circle cx="128" cy="190" r="12" fill="#FFF9EF"/><circle cx="128" cy="190" r="4.5" fill="#E8A63C"/>
-              <circle cx="272" cy="182" r="30" fill="#F3C56B" stroke="#33202D" stroke-width="4"/>
-              <circle cx="272" cy="182" r="13" fill="#FFF9EF"/><circle cx="272" cy="182" r="4.5" fill="#D94F70"/>
-              <circle cx="166" cy="132" r="20" fill="#E58CA1" stroke="#33202D" stroke-width="3.5"/><circle cx="166" cy="132" r="7" fill="#FFF9EF"/>
-              <circle cx="238" cy="128" r="18" fill="#F2B8C6" stroke="#33202D" stroke-width="3.5"/><circle cx="238" cy="128" r="6" fill="#E8A63C"/>
-              <path d="M170 300h60l10 30q0 70-40 70t-40-70Z" fill="#E8A63C" stroke="#33202D" stroke-width="4"/>
-              <rect x="164" y="292" width="72" height="16" rx="6" fill="#C68A28" stroke="#33202D" stroke-width="3.5"/>
-              <path d="M200 340q-10 20 0 44" stroke="#FFF9EF" stroke-width="4" fill="none" opacity=".6"/>
-              <rect x="268" y="360" width="86" height="70" rx="6" fill="#D94F70" stroke="#33202D" stroke-width="4"/>
-              <rect x="302" y="360" width="18" height="70" fill="#F3C56B" stroke="#33202D" stroke-width="3"/>
-              <path d="M311 360c-16-18-30 2-12 8 8 3 12-2 12-8Zm0 0c16-18 30 2 12 8-8 3-12-2-12-8Z" fill="#F3C56B" stroke="#33202D" stroke-width="3"/>
-              <circle cx="60" cy="70" r="5" fill="#D94F70"/><circle cx="348" cy="100" r="5" fill="#E8A63C"/>
-              <path d="M330 470l5 11 11 5-11 5-5 11-5-11-11-5 11-5z" fill="#2F6E62"/>
-            </svg>
+            <img src="photo5.jpg" alt="Фото Оли № 5" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
+            <div class="ph-hint">фото № 5<code>photo5.jpg</code></div>
           </div>
-          <figcaption>Цветы без повода — наш любимый жанр</figcaption>
-          <span class="pc-num">открытка № 5</span>
+          <figcaption>Прекрасна без усилий — и это факт</figcaption>
+          <span class="pc-num">кадр № 5</span>
         </figure>
       </div>
     </div>
@@ -609,18 +501,18 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
   <!-- ══ Вытяни пожелание ══ -->
   <section id="wish-draw" data-reveal>
     <div class="wrap">
-      <p class="kicker fade-up" style="justify-content:center">гадание без последствий</p>
+      <p class="kicker fade-up" style="justify-content:center">мои пожелания — тяни любое</p>
       <h2 class="rm" style="font-size:clamp(30px,4.6vw,52px)"><span>Вытяни пожелание на этот год</span></h2>
       <div class="wish-stage fade-up d1">
         <div class="wish-card" id="wishCard">
           <div class="wish-face wish-front">
             <span class="q">✶</span>
-            <p class="hand" style="font-size:26px">колода тёплых слов<br>перемешана судьбой</p>
+            <p class="hand" style="font-size:26px">я перемешал колоду<br>тёплых слов — только для тебя</p>
             <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:800">тяни →</span>
           </div>
           <div class="wish-face wish-back">
             <span class="corner c1">✦</span>
-            <p class="hand" id="wishBackText">Здесь появится твоё персональное пожелание…</p>
+            <p class="hand" id="wishBackText">Здесь появится моё пожелание для тебя…</p>
             <span class="corner c2">✦</span>
           </div>
         </div>
@@ -633,10 +525,10 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
   <section id="facts">
     <div class="wrap">
       <div class="facts-grid">
-        <div class="fact fade-up"><b><span data-count="365">0</span></b><span>дней для чудес в этом году</span></div>
-        <div class="fact fade-up d1"><b><span data-count="1000">0</span>+</b><span>поводов улыбнуться</span></div>
-        <div class="fact fade-up d2"><b><span data-count="100">0</span>%</b><span>уверенность: ты — чудо</span></div>
-        <div class="fact fade-up d3"><b><i class="inf yeseva">∞</i></b><span>обнимашек по подписке</span></div>
+        <div class="fact fade-up"><b><span data-count="365">0</span></b><span>дней для чудес я тебе желаю</span></div>
+        <div class="fact fade-up d1"><b><span data-count="1000">0</span>+</b><span>поводов улыбнуться — прослежу лично</span></div>
+        <div class="fact fade-up d2"><b><span data-count="100">0</span>%</b><span>я уверен: ты — чудо</span></div>
+        <div class="fact fade-up d3"><b><i class="inf yeseva">∞</i></b><span>обнимашек от меня — по подписке</span></div>
       </div>
     </div>
   </section>
@@ -647,7 +539,7 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
       <div class="letter-grid">
         <div class="letter-left">
           <p class="kicker fade-up">самое важное</p>
-          <h2 class="rm" style="font-size:clamp(30px,4.4vw,50px);margin-top:10px"><span>Письмо тебе</span></h2>
+          <h2 class="rm" style="font-size:clamp(30px,4.4vw,50px);margin-top:10px"><span>Моё письмо тебе</span></h2>
           <p class="hand fade-up d1">читать вслух — эффект усиливается ✨</p>
           <svg class="envelope fade-up d2" viewBox="0 0 220 150" aria-hidden="true">
             <rect x="8" y="20" width="204" height="120" rx="8" fill="#FFF9EF" stroke="#33202D" stroke-width="4"/>
@@ -658,34 +550,13 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
         </div>
         <div class="sheet fade-up d1">
           <p>Дорогая Оля!</p>
-          <p>Говорят, самые важные слова писать труднее всего. Но дело не в словах — трудно уместить в них всё то тепло, которое ты даришь людям вокруг.</p>
-          <p>Ты умеешь быть рядом так, как умеют немногие: не громко, но очень надёжно. С тобой можно смеяться до слёз и молчать часами, строить грандиозные планы и ничего не планировать вообще.</p>
-          <p>Пусть этот год будет щедрым: на добрые новости, тёплые вечера, смелые решения и маленькие чудеса. Пусть <span class="hl">то, о чём ты мечтаешь молча, обязательно сбудется</span> — громко и красиво.</p>
-          <p>Какое счастье, что ты есть. С праздником!</p>
+          <p>Говорят, самые важные слова писать труднее всего. Но дело не в словах — мне трудно уместить в них всё то тепло, которое ты даришь.</p>
+          <p>Ты умеешь быть рядом так, как умеют немногие: не громко, но очень надёжно. С тобой я могу смеяться до слёз и молчать часами, строить грандиозные планы и ничего не планировать вообще.</p>
+          <p>Пусть этот год будет щедрым: на добрые новости, тёплые вечера, смелые решения и маленькие чудеса. Пусть <span class="hl">то, о чём ты мечтаешь молча, обязательно сбудется</span> — громко и красиво. А я буду рядом и помогу.</p>
+          <p>Какое счастье, что ты есть в моей жизни. С праздником!</p>
           <p class="sign">С любовью и самыми крепкими обнимашками ♥</p>
-          <p class="sign-sub">— те, кто всегда на твоей стороне</p>
+          <p class="sign-sub">— твой личный фанат № 1</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ Книга пожеланий ══ -->
-  <section id="guestbook" data-reveal>
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker fade-up">стена тёплых слов</p>
-        <h2 class="rm"><span>Книга пожеланий для Оли</span></h2>
-        <p class="fade-up d1" style="margin-top:14px;color:var(--plum)">Оставь пару тёплых слов — Оля прочитает каждое, честно.</p>
-      </div>
-      <div class="gb-grid">
-        <form class="gb-form fade-up d1" id="gbForm">
-          <label for="gbName">Как тебя зовут</label>
-          <input id="gbName" type="text" maxlength="30" placeholder="Например: Маша" autocomplete="name">
-          <label for="gbText">Твоё пожелание</label>
-          <textarea id="gbText" maxlength="240" placeholder="Олечка, желаю тебе…" required></textarea>
-          <button class="btn btn-pine" type="submit">Приклеить записку 📌</button>
-        </form>
-        <div class="wall fade-up d2" id="wall"></div>
       </div>
     </div>
   </section>
@@ -693,8 +564,8 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 </main>
 
 <footer>
-  <p class="hand">Сделано с ♥ и большим количеством конфетти — для Оли</p>
-  <small>почта любви · депеша № 001 · <span id="year"></span> · пересылка обнимашек бесплатна</small>
+  <p class="hand">Сделано с ♥ и большим количеством конфетти — для тебя, Оля</p>
+  <small>почта любви · депеша № 001 · <span id="year"></span> · обнимашки пересылаются бесплатно</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -703,7 +574,6 @@ document.body.classList.add('js');
 var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var PALETTE = ['#D94F70','#E8A63C','#2F6E62','#F3C56B','#FFF6E6','#F2B8C6'];
 
-/* ── конфетти ── */
 function fireConfetti(opts){
   if (RM || typeof confetti !== 'function') return;
   confetti(Object.assign({particleCount:80, spread:70, colors:PALETTE, zIndex:150}, opts||{}));
@@ -714,7 +584,7 @@ function burstAt(el){
   fireConfetti({origin:{x:(r.left+r.width/2)/innerWidth, y:(r.top+r.height/2)/innerHeight}, particleCount:50, spread:60, scalar:.9});
 }
 
-/* ── телеграмма ── */
+/* телеграмма */
 (function(){
   var tg = document.getElementById('telegram');
   if(!tg) return;
@@ -723,16 +593,12 @@ function burstAt(el){
     if(started) return; started = true;
     tg.classList.add('opened');
     fireConfetti({particleCount:120, spread:100, origin:{y:.35}});
-    setTimeout(function(){ tg.classList.add('gone'); celebrate(); }, RM?50:650);
+    setTimeout(function(){ tg.classList.add('gone'); runScramble(); startAmbient(); }, RM?50:650);
     setTimeout(function(){ tg.style.display='none'; }, RM?200:1600);
   });
-  function celebrate(){
-    runScramble();
-    startAmbient();
-  }
 })();
 
-/* ── scramble-заголовок ── */
+/* scramble-заголовок */
 function runScramble(){
   var el = document.getElementById('scrambleTitle');
   if(!el) return;
@@ -753,7 +619,7 @@ function runScramble(){
   })(start);
 }
 
-/* ── падающие лепестки ── */
+/* лепестки */
 function startAmbient(){
   if (RM) return;
   var box = document.getElementById('ambient');
@@ -771,7 +637,7 @@ function startAmbient(){
   }
 }
 
-/* ── появления по скроллу ── */
+/* появления по скроллу */
 (function(){
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
@@ -781,9 +647,8 @@ function startAmbient(){
   document.querySelectorAll('[data-reveal], .fade-up').forEach(function(el){ io.observe(el); });
 })();
 
-/* ── счётчики фактов ── */
+/* счётчики */
 (function(){
-  var els = document.querySelectorAll('[data-count]');
   var cio = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting) return;
@@ -793,16 +658,15 @@ function startAmbient(){
       var t0 = performance.now(), dur = 1300;
       (function tick(now){
         var p = Math.min(1,(now-t0)/dur);
-        var v = Math.round(end*(1-Math.pow(1-p,3)));
-        el.textContent = v.toLocaleString('ru-RU');
+        el.textContent = Math.round(end*(1-Math.pow(1-p,3))).toLocaleString('ru-RU');
         if(p<1) requestAnimationFrame(tick);
       })(t0);
     });
   },{threshold:.5});
-  els.forEach(function(el){ cio.observe(el); });
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
 })();
 
-/* ── обнимашки ── */
+/* обнимашки */
 (function(){
   var btn = document.getElementById('hugBtn');
   var num = document.getElementById('hugNum');
@@ -826,7 +690,7 @@ function startAmbient(){
   });
 })();
 
-/* ── свечи ── */
+/* свечи */
 (function(){
   var candles = Array.prototype.slice.call(document.querySelectorAll('.candle'));
   var countEl = document.getElementById('candleCount');
@@ -836,11 +700,11 @@ function startAmbient(){
   var wishText = document.getElementById('wishText');
   if(!candles.length) return;
   var miniWishes = [
-    'Пусть каждый день находится повод для маленькой радости.',
-    'Пусть всё складывается легко, красиво и вовремя.',
-    'Пусть рядом всегда будут те, с кем тепло.',
-    'Пусть мечты сбываются быстрее, чем ты успеваешь их повторить.',
-    'Пусть этот год станет твоей любимой главой.'
+    'Я желаю, чтобы каждый день у тебя находился повод для маленькой радости.',
+    'Я желаю, чтобы всё складывалось легко, красиво и вовремя.',
+    'Я желаю, чтобы рядом всегда было тепло. Я об этом позабочусь.',
+    'Пусть мечты сбываются быстрее, чем ты успеваешь их повторить, — я помогу.',
+    'Пусть этот год станет твоей любимой главой. А я буду рядом.'
   ];
   function plural(n, forms){
     n = Math.abs(n)%100; var n1 = n%10;
@@ -885,25 +749,24 @@ function startAmbient(){
   });
 })();
 
-/* ── колода пожеланий ── */
+/* колода пожеланий */
 (function(){
   var wishes = [
-    'Пусть утро начинается с улыбки и вкусного кофе ☕',
-    'Желаю путешествий, от которых захватывает дух ✈️',
-    'Пусть мечты сбываются быстрее, чем ты успеваешь их загадать 🌠',
-    'Желаю людей рядом, с которыми тепло и легко 🤍',
-    'Пусть каждый день находится повод для маленького праздника 🎈',
-    'Желаю смелости на большие шаги и сил на маленькие 🌿',
-    'Пусть всё покупается легко, а мечты — по скидке «для Оли» 💫',
-    'Желаю здоровья крепкого, как утренний мороз ❄️',
-    'Пусть вдохновение не кончается никогда ♾️',
-    'Желаю танцевать так, будто никто не смотрит 💃',
-    'Пусть дом будет полон смеха и запаха выпечки 🥐',
-    'Желаю любви — большой, тёплой и настоящей ❤️'
+    'Я желаю тебе утреннего кофе и улыбки к нему ☕',
+    'Я желаю тебе путешествий, от которых захватывает дух ✈️',
+    'Я желаю, чтобы мечты сбывались быстрее, чем ты успеваешь их загадать 🌠',
+    'Я желаю тебе побольше моментов, когда легко и тепло 🤍',
+    'Я желаю, чтобы каждый день находился повод для маленького праздника 🎈',
+    'Я желаю тебе смелости на большие шаги и сил на маленькие 🌿',
+    'Я желаю, чтобы всё доставалось тебе легко — ты заслужила 💫',
+    'Я желаю здоровья крепкого, как утренний мороз ❄️',
+    'Я желаю, чтобы вдохновение не заканчивалось никогда ♾️',
+    'Я желаю танцевать так, будто никто не смотрит, — и я потанцую с тобой 💃',
+    'Я желаю дом, полный смеха. Мой смех уже в комплекте 🥐',
+    'Я желаю тебе любви — большой, тёплой и настоящей ❤️'
   ];
   var card = document.getElementById('wishCard');
   var btn = document.getElementById('drawWish');
-  var backText = document.getElementById('wishBackText');
   if(!card||!btn) return;
   var rot = 0, bag = [], last = '';
   function pick(){
@@ -913,9 +776,8 @@ function startAmbient(){
     last = w; return w;
   }
   btn.addEventListener('click', function(){
-    var faces = card.children;
-    var nextShowsBack = (rot/180)%2===0;
-    var target = nextShowsBack ? document.getElementById('wishBackText') : card.querySelector('.wish-front .hand');
+    var showsBack = (rot/180)%2===0;
+    var target = showsBack ? document.getElementById('wishBackText') : card.querySelector('.wish-front .hand');
     target.textContent = pick();
     rot += 180;
     card.style.transform = 'rotateY('+rot+'deg)';
@@ -923,45 +785,7 @@ function startAmbient(){
   });
 })();
 
-/* ── книга пожеланий ── */
-(function(){
-  var wall = document.getElementById('wall');
-  var form = document.getElementById('gbForm');
-  if(!wall||!form) return;
-  var seeds = [
-    {name:'Катя', text:'Олечка, сияй ярче всех гирлянд! Ты — настоящее чудо ✨'},
-    {name:'Дима', text:'С праздником! Пусть всё складывается легко и красиво 🎉'},
-    {name:'Аня', text:'Обнимаю крепко-крепко! Спасибо, что ты есть 💛'}
-  ];
-  var saved = [];
-  try { saved = JSON.parse(localStorage.getItem('olya-wishes')||'[]'); } catch(err){ saved = []; }
-  var rots = ['-3deg','-1.5deg','1deg','2.5deg','-2deg'];
-  var cols = ['note--a','note--b','note--c','note--d'];
-  function makeNote(item, i){
-    var n = document.createElement('article');
-    n.className = 'note '+cols[i%cols.length];
-    n.style.setProperty('--r', rots[i%rots.length]);
-    n.style.animationDelay = ((i%6)*0.07)+'s';
-    var p = document.createElement('p'); p.textContent = item.text;
-    var c = document.createElement('cite'); c.textContent = '— '+(item.name||'друг');
-    n.appendChild(p); n.appendChild(c);
-    return n;
-  }
-  seeds.concat(saved).forEach(function(item,i){ wall.appendChild(makeNote(item,i)); });
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var name = document.getElementById('gbName').value.trim() || 'Тайный поклонник';
-    var text = document.getElementById('gbText').value.trim();
-    if(!text){ document.getElementById('gbText').focus(); return; }
-    saved.push({name:name, text:text});
-    try { localStorage.setItem('olya-wishes', JSON.stringify(saved)); } catch(err){}
-    wall.insertBefore(makeNote({name:name,text:text}, wall.children.length), wall.firstChild);
-    form.reset();
-    burstAt(form);
-  });
-})();
-
-/* ── праздничная мелодия (веб-аудио) ── */
+/* мелодия */
 (function(){
   var btn = document.getElementById('musicBtn');
   if(!btn) return;
@@ -986,12 +810,10 @@ function startAmbient(){
       nodes.push(o);
       t += d;
     });
-    var total = (t - ctx.currentTime + .7)*1000;
-    timer = setTimeout(function(){ if(on && ctx) schedule(); }, total);
+    timer = setTimeout(function(){ if(on && ctx) schedule(); }, (t - ctx.currentTime + .7)*1000);
   }
   function stop(){
     on = false; btn.classList.remove('on'); btn.setAttribute('aria-pressed','false');
-    btn.setAttribute('aria-label','Включить праздничную мелодию');
     if(timer){ clearTimeout(timer); timer = null; }
     nodes.forEach(function(n){ try{ n.stop(); }catch(err){} });
     nodes = [];
@@ -1001,7 +823,6 @@ function startAmbient(){
     if(!ctx){ var AC = window.AudioContext || window.webkitAudioContext; if(!AC) return; ctx = new AC(); }
     if(ctx.state==='suspended') ctx.resume();
     on = true; btn.classList.add('on'); btn.setAttribute('aria-pressed','true');
-    btn.setAttribute('aria-label','Остановить мелодию');
     schedule();
   });
 })();
