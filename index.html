@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Оля, с Днём рождения! 💌</title>
-<meta name="description" content="Моё личное поздравление чрезвычайной важности для самой лучшей Оли">
+<meta name="description" content="Моё личное поздравление для лучшей подруги Оли — от лучшего друга">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/yeseva-one@latest/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/600.css">
@@ -112,7 +112,7 @@ h1.hero-title{font-size:clamp(42px,7.6vw,96px);letter-spacing:.01em;text-shadow:
 .sticker:nth-child(2){transform:rotate(1.6deg)}
 .sticker:nth-child(3){transform:rotate(-1deg);background:var(--mint)}
 
-/* полароид в герое + сургучная печать */
+/* полароид в герое + печать */
 .hero-right{position:relative;justify-self:end;width:min(380px,100%)}
 .hero-photo{position:relative;background:#FFFDF6;border:2.5px solid var(--ink);padding:12px 12px 14px;
   box-shadow:var(--shadow);transform:rotate(3deg)}
@@ -123,13 +123,13 @@ h1.hero-title{font-size:clamp(42px,7.6vw,96px);letter-spacing:.01em;text-shadow:
   box-shadow:6px 8px 0 rgba(51,32,45,.2);z-index:3;animation:bob 5s ease-in-out infinite}
 .seal-inner{text-align:center}
 .seal span{font-family:'Yeseva One',serif;font-size:44px;line-height:1}
-.seal small{font-size:9px;letter-spacing:.28em;text-transform:uppercase;font-weight:800}
+.seal small{font-size:9px;letter-spacing:.24em;text-transform:uppercase;font-weight:800}
 @keyframes bob{50%{transform:rotate(-14deg) translateY(-8px)}}
 .doodle{position:absolute;z-index:1;animation:bob 6s ease-in-out infinite}
 .doodle.d2{animation-delay:-2s;animation-duration:7s}
 .doodle.d3{animation-delay:-4s;animation-duration:5.4s}
 
-/* ── фото-рамки (img + подсказка) ── */
+/* ── фото-рамки ── */
 .pc-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper2);border:1.5px solid rgba(51,32,45,.2)}
 .pc-img img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;animation:slowkb 15s ease-in-out infinite}
 .ph-hint{display:none;position:absolute;inset:0;place-items:center;text-align:center;padding:16px;
@@ -213,7 +213,7 @@ h1.hero-title{font-size:clamp(42px,7.6vw,96px);letter-spacing:.01em;text-shadow:
 .sc-4{background:var(--pine);color:var(--cream);--r:.8deg}
 .sc-5{background:var(--blush);--r:-.7deg}
 
-/* ── галерея открыток с фото ── */
+/* ── галерея ── */
 #board{position:relative;height:780px;margin-top:50px}
 .postcard{position:absolute;width:var(--w,280px);background:#FFFDF6;border:2.5px solid var(--ink);
   padding:12px 12px 14px;box-shadow:var(--shadow);transform:rotate(var(--r));cursor:default;
@@ -318,11 +318,11 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 <!-- ══ Телеграмма ══ -->
 <div id="telegram" role="dialog" aria-modal="true" aria-label="Срочная телеграмма для Оли">
   <div class="tg-card">
-    <div class="tg-stamp">Почта любви · секретно</div>
+    <div class="tg-stamp">Почта дружбы · секретно</div>
     <div class="tg-cut">✂ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
-    <div class="tg-top"><span>Почта любви</span><span>Депеша № 001</span></div>
-    <p class="tg-row"><b>Кому:</b> Оле, самой-самой</p>
-    <p class="tg-row"><b>От:</b> меня</p>
+    <div class="tg-top"><span>Почта дружбы</span><span>Депеша № 001</span></div>
+    <p class="tg-row"><b>Кому:</b> Оле, моей лучшей подруге</p>
+    <p class="tg-row"><b>От:</b> меня, лучшего друга</p>
     <p class="tg-text">«Отправляю тебе поздравление чрезвычайной важности. Вскрыть немедленно. Обнимашки и комплименты действуют бессрочно — у меня их бесконечный запас.»</p>
     <button class="btn btn-primary" id="openTg" type="button">Вскрыть конверт ✂</button>
     <p class="tg-code">ОЛЯ · ПРАЗДНИК · СРОЧНО · ТЧК</p>
@@ -330,7 +330,7 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 </div>
 
 <header class="topbar">
-  <div class="brand"><span class="dot"></span> Почта любви · от меня — Оле</div>
+  <div class="brand"><span class="dot"></span> Почта дружбы · от меня — Оле</div>
   <button id="musicBtn" type="button" aria-pressed="false" aria-label="Включить праздничную мелодию" title="Праздничная мелодия">♪</button>
 </header>
 
@@ -353,26 +353,26 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
         </div>
         <div class="stickers fade-up d3">
           <span class="sticker">ты — моя лучшая подруга</span>
-          <span class="sticker">проверено мной лично</span>
-          <span class="sticker">твоё сияние — бесконечное</span>
+          <span class="sticker">я — твой лучший друг, проверено</span>
+          <span class="sticker">дружим вечно · без срока годности</span>
         </div>
       </div>
       <div class="hero-right fade-up d2">
         <figure class="hero-photo">
-          <div class="seal" aria-hidden="true"><div class="seal-inner"><span>О♥</span><small>с любовью</small></div></div>
+          <div class="seal" aria-hidden="true"><div class="seal-inner"><span>О♥</span><small>лучшей подруге</small></div></div>
           <div class="pc-img">
             <!-- ГЛАВНОЕ ФОТО: положи файл photo-main.jpg рядом с index.html -->
             <img src="photo-main.jpg" alt="Оля" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
             <div class="ph-hint">здесь будет твоё главное фото<code>photo-main.jpg</code></div>
           </div>
-          <figcaption>ты — главное украшение этого праздника</figcaption>
+          <figcaption>лучшая подруга — главный герой этого праздника</figcaption>
         </figure>
       </div>
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
-        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>цветы просто так</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
+        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>друзья навсегда</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
+        <span><b>обнимашки</b>✦<b>твоя улыбка</b>✦<b>кофе по утрам</b>✦<b>танцы на кухне</b>✦<b>мечты сбываются</b>✦<b>ты — моё чудо</b>✦<b>смех до слёз</b>✦<b>друзья навсегда</b>✦<b>приключения</b>✦<b>тёплые вечера</b>✦</span>
       </div>
     </div>
   </section>
@@ -424,13 +424,13 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
     <div class="wrap">
       <div class="sec-head">
         <p class="kicker fade-up">моя доказательная база</p>
-        <h2 class="rm"><span>Пять причин, почему ты — чудо</span></h2>
+        <h2 class="rm"><span>Пять причин, почему ты — лучший друг</span></h2>
       </div>
       <div class="stack">
         <article class="stack-card sc-1" style="--i:0"><div class="num">01</div><div><h3>С тобой уютно даже молчать</h3><p>Тишина с тобой превращается в разговор, а самый обычный вечер — в маленький праздник. Я это очень ценю.</p></div></article>
         <article class="stack-card sc-2" style="--i:1"><div class="num">02</div><div><h3>Твой смех лечит</h3><p>Проверено мной сотни раз: после разговора с тобой любой дождь кажется свежее, а любая проблема — раза в три меньше.</p></div></article>
         <article class="stack-card sc-3" style="--i:2"><div class="num">03</div><div><h3>Ты всегда на моей стороне</h3><p>В два часа ночи и в семь утра, с гениальным планом или просто с крепкими обнимашками. Это дороже любых подарков.</p></div></article>
-        <article class="stack-card sc-4" style="--i:3"><div class="num">04</div><div><h3>Ты вдохновляешь меня быть смелее</h3><p>Рядом с тобой мне хочется мечтать крупнее, начинать новое и не бояться, что не получится. Получится — я проверил.</p></div></article>
+        <article class="stack-card sc-4" style="--i:3"><div class="num">04</div><div><h3>Ты вдохновляешь меня быть смелее</h3><p>Рядом с тобой мне хочется мечтать крупнее, начинать новое и не бояться, что не получится. Получится — мы же вместе.</p></div></article>
         <article class="stack-card sc-5" style="--i:4"><div class="num">05</div><div><h3>Ты делаешь чудо из мелочей</h3><p>Чай в красивой кружке, свеча, музыка потише — и с тобой обычный вторник становится праздником.</p></div></article>
       </div>
     </div>
@@ -446,8 +446,8 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
   <section id="postcards" data-reveal>
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker fade-up">самые красивые кадры</p>
-        <h2 class="rm"><span>Твои фото — я выбирал их с любовью</span></h2>
+        <p class="kicker fade-up">наши самые красивые кадры</p>
+        <h2 class="rm"><span>Твои фото — я выбирал их с теплом</span></h2>
       </div>
       <div id="board">
         <figure class="postcard pc1">
@@ -528,7 +528,7 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
         <div class="fact fade-up"><b><span data-count="365">0</span></b><span>дней для чудес я тебе желаю</span></div>
         <div class="fact fade-up d1"><b><span data-count="1000">0</span>+</b><span>поводов улыбнуться — прослежу лично</span></div>
         <div class="fact fade-up d2"><b><span data-count="100">0</span>%</b><span>я уверен: ты — чудо</span></div>
-        <div class="fact fade-up d3"><b><i class="inf yeseva">∞</i></b><span>обнимашек от меня — по подписке</span></div>
+        <div class="fact fade-up d3"><b><i class="inf yeseva">∞</i></b><span>обнимашек от лучшего друга</span></div>
       </div>
     </div>
   </section>
@@ -551,11 +551,11 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
         <div class="sheet fade-up d1">
           <p>Дорогая Оля!</p>
           <p>Говорят, самые важные слова писать труднее всего. Но дело не в словах — мне трудно уместить в них всё то тепло, которое ты даришь.</p>
-          <p>Ты умеешь быть рядом так, как умеют немногие: не громко, но очень надёжно. С тобой я могу смеяться до слёз и молчать часами, строить грандиозные планы и ничего не планировать вообще.</p>
+          <p>Ты умеешь быть рядом так, как умеют немногие: не громко, но очень надёжно. С тобой я могу смеяться до слёз и молчать часами, строить грандиозные планы и ничего не планировать вообще. Вот что значит — лучший друг.</p>
           <p>Пусть этот год будет щедрым: на добрые новости, тёплые вечера, смелые решения и маленькие чудеса. Пусть <span class="hl">то, о чём ты мечтаешь молча, обязательно сбудется</span> — громко и красиво. А я буду рядом и помогу.</p>
           <p>Какое счастье, что ты есть в моей жизни. С праздником!</p>
-          <p class="sign">С любовью и самыми крепкими обнимашками ♥</p>
-          <p class="sign-sub">— твой личный фанат № 1</p>
+          <p class="sign">С теплом и самыми крепкими обнимашками ♥</p>
+          <p class="sign-sub">— твой лучший друг</p>
         </div>
       </div>
     </div>
@@ -565,7 +565,7 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
 
 <footer>
   <p class="hand">Сделано с ♥ и большим количеством конфетти — для тебя, Оля</p>
-  <small>почта любви · депеша № 001 · <span id="year"></span> · обнимашки пересылаются бесплатно</small>
+  <small>почта дружбы · депеша № 001 · <span id="year"></span> · обнимашки пересылаются бесплатно</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -761,9 +761,9 @@ function startAmbient(){
     'Я желаю, чтобы всё доставалось тебе легко — ты заслужила 💫',
     'Я желаю здоровья крепкого, как утренний мороз ❄️',
     'Я желаю, чтобы вдохновение не заканчивалось никогда ♾️',
-    'Я желаю танцевать так, будто никто не смотрит, — и я потанцую с тобой 💃',
+    'Я желаю танцевать так, будто никто не смотрит, — я потанцую с тобой 💃',
     'Я желаю дом, полный смеха. Мой смех уже в комплекте 🥐',
-    'Я желаю тебе любви — большой, тёплой и настоящей ❤️'
+    'Я желаю тебе большой и настоящей любви — и всегда поддержу ❤️'
   ];
   var card = document.getElementById('wishCard');
   var btn = document.getElementById('drawWish');
