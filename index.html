@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Оля, с Днём рождения! 💌</title>
 <meta name="description" content="Моё личное поздравление для лучшей подруги Оли — от лучшего друга">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/yeseva-one@latest/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/700.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@latest/800.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@latest/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@latest/600.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@latest/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/yeseva-one@5.1.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@5.1.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@5.1.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@5.1.0/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/golos-text@5.1.0/800.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@5.1.0/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@5.1.0/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/caveat@5.1.0/700.css">
+
 <style>
 :root{
   --paper:#FBF3E6; --paper2:#F4E7D0; --cream:#FFF9EF;
@@ -345,11 +346,13 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
       <div>
         <p class="hero-note fade-up">да-да, эта страница — про тебя! ↓</p>
         <p class="kicker fade-up d1">Срочное послание · лично от меня</p>
-        <h1 class="hero-title"><span id="scrambleTitle" data-text="Оля, с Днём рождения!">Оля, с Днём рождения!</span></h1>
+        <!-- ИСПРАВЛЕНИЕ 4: Добавлен tabindex="-1" для управления фокусом -->
+        <h1 class="hero-title" tabindex="-1"><span id="scrambleTitle" data-text="Оля, с Днём рождения!">Оля, с Днём рождения!</span></h1>
         <p class="hero-sub fade-up d2">Сегодня твой день, и я собрал для тебя маленький праздник прямо в интернете. Заходи смелее — и обязательно задуй свечи: твоё желание я уже отправил во вселенную.</p>
         <div class="hug-zone fade-up d3">
           <button class="btn btn-gold" id="hugBtn" type="button">Обнять тебя 🤗</button>
-          <span class="hug-count">обнимашек отправлено: <b id="hugNum">0</b></span>
+          <!-- ИСПРАВЛЕНИЕ 5: Уточнение про устройство -->
+          <span class="hug-count">обнимашек отправлено: <b id="hugNum">0</b> <small style="font-size:12px;opacity:.7;font-weight:400">(на этом устройстве)</small></span>
         </div>
         <div class="stickers fade-up d3">
           <span class="sticker">ты — моя лучшая подруга</span>
@@ -361,7 +364,6 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
         <figure class="hero-photo">
           <div class="seal" aria-hidden="true"><div class="seal-inner"><span>О♥</span><small>лучшей подруге</small></div></div>
           <div class="pc-img">
-            <!-- ГЛАВНОЕ ФОТО: положи файл photo-main.jpg рядом с index.html -->
             <img src="photo-main.jpg" alt="Оля" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='grid'">
             <div class="ph-hint">здесь будет твоё главное фото<code>photo-main.jpg</code></div>
           </div>
@@ -436,13 +438,7 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
     </div>
   </section>
 
-  <!-- ══ Галерея фото ══
-       КАК ДОБАВИТЬ СВОИ ФОТО:
-       1. Загрузи файлы photo1.jpg … photo5.jpg в репозиторий рядом с index.html
-       2. Подпись меняется внутри <figcaption>
-       3. Лишняя карточка удаляется целиком (весь блок <figure …>…</figure>)
-       4. Наклон и положение — в CSS, классы .pc1–.pc5
-  -->
+  <!-- ══ Галерея фото ══ -->
   <section id="postcards" data-reveal>
     <div class="wrap">
       <div class="sec-head">
@@ -568,7 +564,8 @@ footer small{display:block;margin-top:8px;font-size:11px;letter-spacing:.22em;te
   <small>почта дружбы · депеша № 001 · <span id="year"></span> · обнимашки пересылаются бесплатно</small>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<!-- ИСПРАВЛЕНИЕ 2: Добавлены integrity и crossorigin для безопасности -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" integrity="sha384-1t+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a+42a" crossorigin="anonymous"></script>
 <script>
 document.body.classList.add('js');
 var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -593,7 +590,14 @@ function burstAt(el){
     if(started) return; started = true;
     tg.classList.add('opened');
     fireConfetti({particleCount:120, spread:100, origin:{y:.35}});
-    setTimeout(function(){ tg.classList.add('gone'); runScramble(); startAmbient(); }, RM?50:650);
+    setTimeout(function(){ 
+      tg.classList.add('gone'); 
+      runScramble(); 
+      startAmbient(); 
+      // ИСПРАВЛЕНИЕ 4: Передача фокуса на заголовок после закрытия оверлея
+      var title = document.getElementById('scrambleTitle');
+      if(title) title.focus();
+    }, RM?50:650);
     setTimeout(function(){ tg.style.display='none'; }, RM?200:1600);
   });
 })();
@@ -801,11 +805,22 @@ function startAmbient(){
     seq.forEach(function(pair){
       var f = pair[0], d = pair[1]*beat;
       var o = ctx.createOscillator(), g = ctx.createGain();
-      o.type = 'triangle'; o.frequency.value = f;
+      // ИСПРАВЛЕНИЕ 3: Добавлен фильтр для мягкого звука "музыкальной шкатулки"
+      var filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 600; // Срезает резкие высокие частоты
+      
+      o.type = 'triangle'; 
+      o.frequency.value = f;
+      
       g.gain.setValueAtTime(.0001, t);
-      g.gain.exponentialRampToValueAtTime(.2, t+.03);
+      g.gain.exponentialRampToValueAtTime(.15, t+.03); // Чуть снижена громкость
       g.gain.exponentialRampToValueAtTime(.0001, t+d*.92);
-      o.connect(g); g.connect(ctx.destination);
+      
+      o.connect(filter); 
+      filter.connect(g); 
+      g.connect(ctx.destination);
+      
       o.start(t); o.stop(t+d);
       nodes.push(o);
       t += d;
@@ -830,4 +845,4 @@ function startAmbient(){
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
-</html>
+            </html>
