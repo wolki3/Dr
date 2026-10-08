@@ -799,7 +799,6 @@ function startAmbient(){
     seq.forEach(function(pair){
       var f = pair[0], d = pair[1]*beat;
       var o = ctx.createOscillator(), g = ctx.createGain();
-      // ИСПРАВЛЕНИЕ 3: Добавлен фильтр для мягкого звука "музыкальной шкатулки"
       var filter = ctx.createBiquadFilter();
       filter.type = 'lowpass';
       filter.frequency.value = 600; // Срезает резкие высокие частоты
